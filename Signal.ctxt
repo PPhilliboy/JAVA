@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=name
+comment0.target=Signal(java.lang.String)
+comment0.text=\r\n\ Konstruktor\ der\ Klasse\ Signal\r\n\ \r\n\r\n\ Der\ Konsturtor\ initalisiert\ die\ Instanz\ einer\ Klasse.\ \r\n\ \r\n\ @param\ name\ \ \ \ \ \ Name\ des\ Signals\ wird\ beim\ Erstellen\ der\ Signalinstanz\ ihr\ selbst\ zugeordnet.\r\n
+comment1.params=value
+comment1.target=void\ setValue(boolean)
+comment1.text=\r\n\ Methode\ setValue\ \r\n\ \r\n\ \r\n\ Die\ Methode\ \u00FCbertr\u00E4gt\ zuerst\ den\ neuen\ Signalwert\ in\ den\ privaten\ Speicherbereich\ \r\n\ und\ leitet\ diesen\ an\ alle\ ihm\ angeschlossenen\ Gattereing\u00E4nge\ weiter.\ Ist\ ein\ Signal\ \r\n\ an\ ein\ Gatter\ weitergeleitet,\ hat\ dies\ eine\ Wert\u00E4nderung\ im\ Gatter\ zufolge.\ \r\n\ Dementsprechend\ wird\ von\ dieser\ Methode\ heraus\ die\ Neuberechnung\ des\ Gatters\ angestuppst.\r\n\ \r\n\ @param\ value\ \ \ \ \ Value\ ist\ der\ momentane\ Wertzustand\ des\ Signals.\ Da\ wir\ uns\ in\ der\ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Digitalen\ Welt\ befinden\ ist\ dieser\ Zustand\ entweder\ logisch\ wahr\ oder\ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ logisch\ falsch.\r\n
+comment2.params=
+comment2.target=boolean\ getValue()
+comment2.text=\r\n\ Methode\ getValue\ \r\n\ \r\n\ \r\n\ Die\ Methode\ liefert\ den\ aktuellen\ Wert\ des\ Signals\ zur\u00FCck.\r\n
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment3.text=\r\n\ Methode\ getName\ \r\n\ \r\n\ \r\n
+comment4.params=nand
+comment4.target=void\ woBinIchAngeschlossen(Nand)
+comment4.text=\r\n\ Methode\ woBinIchAngeschlossen\ \r\n\ \r\n\ \r\n\ Die\ Methode\ speichert\ die\ Gatter,\ die\ dem\ Signal\ angeschlossen\ sind.\ Aufgerufen\ wird\r\n\ die\ Methode\ beim\ setzen\ der\ Eing\u00E4nge\ eines\ Gatters.\r\n\ \r\n\ @param\ nand\ \ \ \ \ \ Nand\ ist\ das\ angeschlossene\ Gatter\r\n
+comment5.params=
+comment5.target=boolean\ getInfoSchaltungsausgang()
+comment5.text=\r\n\ Methode\ getAnzahlAngeschlosseneGatter\ \r\n\ \r\n\ \r\n\ \r\n
+numComments=6

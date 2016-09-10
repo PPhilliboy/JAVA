@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=signal\ zeitpunkt\ newValue
+comment0.target=Event(Signal,\ int,\ boolean)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Event\r\n
+comment1.params=e
+comment1.target=void\ setEventQueue(EventQueue)
+comment1.text=\r\n\ Methode\ setEventQueue\r\n
+comment2.params=
+comment2.target=Signal\ getEventSignal()
+comment2.text=\r\n\ Methode\ getEventSignal\r\n
+comment3.params=
+comment3.target=int\ getEventZeitpunkt()
+comment3.text=\r\n\ Methode\ getEventZeitpunkt\r\n
+comment4.params=
+comment4.target=boolean\ getEventValue()
+comment4.text=\r\n\ Methode\ getEventValue\r\n
+comment5.params=
+comment5.target=void\ propagate()
+comment5.text=\r\n\ Methode\ propagate\r\n
+numComments=6
