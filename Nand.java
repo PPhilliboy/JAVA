@@ -15,7 +15,7 @@ public class Nand
      */
     public Nand()
     {
-        // Instanzvariable initialisieren
+        // Instanzvariable initialisieren jjjjjjjj
         x = 0;
     }
 
