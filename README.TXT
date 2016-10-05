@@ -10,5 +10,5 @@ PROJEKTBEZEICHNUNG: Java Praktikum
 PROJEKTZWECK: Gatter Simulation
 VERSION oder DATUM: 05.10.2016 vers. 1
 WIE IST DAS PROJEKT ZU STARTEN:
-AUTOR(EN): P-Boooy, the1stDevice ;-)
+AUTOR(EN): PPhilliboy, the1stDevice ;-)
 BENUTZERHINWEISE:
