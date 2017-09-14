@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=TimingSimulator()
+comment0.text=\r\n\ Konstruktor,\ der\ die\ zu\ simulierende\ Schaltung\ aufbaut,\ den\ Ruhezustand\r\n\ ermittelt\ und\ die\ Eingabe-Events\ erzeugt.\r\n\ Simuliert\ wird\ ein\ einfaches\ RS-FlipFlop.\r\n
+comment1.params=
+comment1.target=void\ buildCircuit()
+comment1.text=\r\n\ Diese\ Methode\ konstruiert\ die\ Schaltung.\ Die\ erzeugten\ Gatter\ und\ die\r\n\ inneren\ Signale\ sind\ nur\ in\ dieser\ Methode\ bekannt,\ da\ sie\ im\ Verlauf\r\n\ der\ Simulation\ implizit\ durch\ die\ Events,\ bzw.\ die\ Signale\ angesprochen\r\n\ werden.\ \r\n
+comment2.params=
+comment2.target=void\ findSteadyState()
+comment2.text=\r\n\ Diese\ Methode\ ermittelt\ den\ Ruhezustand\ der\ Schaltung.\ Dazu\ werden\r\n\ vern\u00FCnftige\ Initialwerte\ an\ die\ Eing\u00E4nge\ angelegt.\ Diese\ Initialwerte\r\n\ m\u00FCssen\ mindestens\ einmal\ durch\ die\ Schaltung\ propagiert\ werden,\r\n\ bis\ sich\ ein\ stabiler\ Zustand\ einstellt.\ Um\ das\ festzustellen\ gibt\r\n\ es\ verschiedene\ Methoden\ (im\ Gatter\ mitz\u00E4hlen,\ wie\ oft\ sich\ der\ Wert\r\n\ \u00E4ndert.\ Im\ Signal\ mitz\u00E4hlen,\ wie\ oft\ es\ ge\u00E4ndert\ wurde).\r\n\ Bei\ diesem\ Propagieren\ darf\ nat\u00FCrlich\ nicht\ mit\ den\ Zeitverz\u00F6gerungen\r\n\ gearbeitet\ werden.\ \ Sie\ k\u00F6nnen\ also\ im\ Grunde\ die\ Wert-Propagierung\r\n\ aus\ der\ ersten\ Teilaufgabe\ benutzen.\r\n
+comment3.params=
+comment3.target=void\ setInputEvents()
+comment3.text=\r\n\ Diese\ Methode\ erzeugt\ eine\ Reihe\ von\ Eingabe-Events,\ die\ dann\ zur\r\n\ Stimulation\ der\ Schaltung\ dienen.\ \ Die\ Events\ werden\ durch\ ihren\r\n\ eigenen\ Konstruktor\ in\ die\ EventQueue\ eingetragen,\ so\ dass\ hier\ nur\r\n\ das\ Erzeugen\ der\ Events\ zu\ sehen\ ist.\r\n\ Jedes\ Event\ bekommt\ beim\ Erzeugen\ das\ betroffene\ Signal,\ den\ Zeitpunkt\r\n\ und\ den\ <bold>neuen\ Wert</bold>\ mit.\r\n
+comment4.params=
+comment4.target=void\ simulate()
+comment4.text=\r\n\ Diese\ Methode\ f\u00FChrt\ die\ eigentliche\ Simulation\ durch.\ Dazu\ wird\r\n\ gepr\u00FCft,\ ob\ in\ der\ EventQueue\ noch\ weitere\ Events\ vorhanden\ sind.\ Ist\r\n\ dies\ der\ Fall,\ dann\ wird\ das\ n\u00E4chste\ anstehende\ Event\ behandelt.\ Dazu\r\n\ muss\ das\ Event\ die\ Methode\ propagate()\ zur\ Verf\u00FCgung\ stellen,\ die\r\n\ dann\ das\ betroffene\ Signal\ informiert.\r\n
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+comment5.text=\r\n\ Main\ Methode\ dieser\ Klasse.\ Sie\ m\u00FCssen\ das\ im\ Moment\ noch\ nicht\r\n\ verstehen.\ Diese\ Methode\ wird\ ben\u00F6tigt,\ wenn\ Sie\ den\ Simulator\ ohne\r\n\ BlueJ\ laufen\ lassen\ wollen.\ Wenn\ Sie\ diese\ Klasse\ in\ BlueJ\ nutzen,\r\n\ dann\ ignorieren\ Sie\ diese\ Methode\ einfach.\r\n
+numComments=6
