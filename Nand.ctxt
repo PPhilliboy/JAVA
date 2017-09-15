@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=number_of_entrance\ delay_time
+comment0.target=Nand(int,\ int)
+comment0.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Nand\r\n\ es\ wird\ eine\ Anzahl\ an\ Eing\u00E4ngen\ \u00FCbergeben\r\n\ es\ wird\ generell\ von\ einem\ Ausgang\ ausgegangen\r\n\ es\ wird\ jedem\ Gatter\ eine\ Gatterlaufzeit\ zugeordnet\r\n
+comment1.params=
+comment1.target=void\ calculate()
+comment1.text=\r\n\ Diue\ Methode\ calculate\ berechnet\ den\ Wert\ des\ AusgangsSignals\ mittels\ \r\n\ logischer\ Verkn\u00FCpfung\ der\ Eing\u00E4nge\ der\ erste\ Eingang\ wird\ mit\ dem\ zweiten\r\n\ UND-Verkn\u00FCpft,\ das\ Ergebnis\ wiederum\ mit\ dem\ n\u00E4chsten\ Eingang\ etc.\r\n\ wichtig\ ist\ hierbei\ das\ vorherige\ Setzen\ des\ Ergebnisses\ auf\ True\r\n\ \r\n\ Unterschieden\ wird\ bei\ der\ Weitergabe,\ ob\ ein\ eingeschwungener\ Zuschand\ \r\n\ der\ Schaltung\ gesucht\ wird,\ oder\ ob\ die\ Schaltung\ aus\ dem\ Betrieb\ heraus\ \r\n\ sich\ \u00E4ndert.\ Im\ letzteren\ Fall\ wird\ nur\ ein\ neues\ Schaltereignis\ erzeugt,\ wenn\ \r\n\ auch\ tatsaechlich\ eine\ \u00C4nderung\ vom\ vorherigen\ Gatterzustand\ zum\ Zustand\ \r\n\ durch\ die\ neue\ Eingangsbelegung\ hervorgerufen\ wird.\r\n
+numComments=2

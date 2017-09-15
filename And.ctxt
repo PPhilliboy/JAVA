@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=number_of_entrance\ delay_time
+comment0.target=And(int,\ int)
+comment1.params=
+comment1.target=void\ calculate()
+numComments=2
