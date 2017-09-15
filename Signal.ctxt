@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=name
+comment0.target=Signal(java.lang.String)
+comment0.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Signal\r\n\ es\ wird\ jedem\ Signal\ ein\ eindeutiger\ Namne\ zugeordnet\r\n\ es\ wird\ jedem\ Signal\ ein\ eindeutiger\ binaerer\ Signalwert\ zugeordnet\r\n\ es\ werden\ alle\ an\ einem\ Signal\ angeschlossenen\ Ziele\ (Gatter)\ in\ einer\ Liste\ gesammelt\r\n
+comment1.params=new_value
+comment1.target=void\ setValue(boolean)
+comment1.text=\r\n\ Die\ Methode\ setValue\ setzt\ den\ neuen\ Wert\ des\ jeweiligen\ Signals\r\n\ und\ propagiert\ diese\ Aenderung\ an\ alle\ angeschlossenen\ Gatter.\r\n\ Unterschieden\ wird\ dabei\ ob\ ein\ eingschwungener\ Anfangszustand\ \r\n\ erreicht\ werden,\ oder\ ein\ regulaeres\ Schaltungsereignis\ auftritt\ \r\n\ und\ propagiert\ werden\ soll.\r\n\ Weiterhin\ wird\ jedes\ Signal,\ was\ einen\ Ausgang\ der\ Schaltung\ darstellt\ auf\ der\ Konsole\ ausgegeben.\r\n
+comment2.params=
+comment2.target=boolean\ getValue()
+comment2.text=\r\n\ Die\ Methode\ getValue\ liefert\ den\ Wert\ des\ Signals\ zur\u00FCck.\r\n
+comment3.params=gate
+comment3.target=void\ setTarget(Gate)
+comment3.text=\r\n\ Die\ Methode\ setTarget\ f\u00FCgt\ ein\ Ziel\ (Gattereingang)\ \r\n\ hinzu,\ an\ welches\ das\ berechnete\ Signal\ \u00FCbergeben\ \r\n\ werden\ soll.\r\n
+comment4.params=
+comment4.target=void\ propagateToTargetList()
+comment4.text=\r\n\ Die\ Methode\ propagateToTargetList\ leitet\ an\ allen\ am\ \r\n\ Signal\ angeschlossenen\ Gattern\ eine\ Neuberechnung\ ein.\r\n
+numComments=5

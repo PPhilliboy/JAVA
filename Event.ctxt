@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=event_signal\ event_time\ event_value
+comment0.target=Event(Signal,\ int,\ boolean)
+comment0.text=\r\n\ Konstruktor\ fuer\ Objekte\ der\ Klasse\ Event\r\n\ Ein\ Event\ bedeutet,\ dass\ zu\ einem\ bestimmten\ Zeitpunkt\ \r\n\ ein\ bestimmter\ Zustand\ eines\ bestimmten\ Signals\ gesetzt\ wird\r\n
+comment1.params=queue
+comment1.target=void\ setEventQueue(EventQueue)
+comment1.text=\r\n\ \ Die\ Methode\ setEventQueue\ tr\u00E4gt\ die\ Eventqueue\ des\ Projektes\ \r\n\ \ in\ ein\ Statisches\ Feld\ der\ Klasse\ Event\ ein.\r\n
+comment2.params=
+comment2.target=EventQueue\ getEventQueue()
+comment2.text=\r\n\ \ Die\ Methode\ getEventQueue\ tr\u00E4gt\ die\ Eventqueue\ des\ Projektes\ \r\n\ \ in\ ein\ Statisches\ Feld\ der\ Klasse\ Event\ ein.\r\n
+comment3.params=
+comment3.target=int\ getEventTime()
+comment3.text=\r\n\ Die\ Methode\ getEventTime\ liefert\ den\ Zeitpunkt\ des\ jeweiligen\ \r\n\ Events\ zur\u00FCck.\r\n
+comment4.params=
+comment4.target=void\ propagate()
+comment4.text=\r\n\ Die\ Mothode\ propagate\ verwaltet\ die\ Signalzustands\u00E4nderungen\ (Events).\ \r\n\ Dabei\ wird\ beim\ propagieren\ grundsetzlich\ zwischen\ Finden\ eines\ \r\n\ eingeschwungenen\ Zustandes\ und\ einer\ aus\ dem\ Betrieb\ heraus\ \r\n\ auftretenden\ Signalzustands\u00E4nderung\ unterschieden.\r\n\ \r\n\ es\ wird\ bei\ einem\ auftretenden\ Ereignis\:\r\n-\ die\ neue\ globale\ Schaltungszeit\ aktualisiert\r\n-\ die\ Signalzustands\u00E4nderung\ an\ sich\ eingeleitet\r\n-\ das\ Event\ aus\ der\ Eventliste\ gel\u00F6scht\r\n
+numComments=5

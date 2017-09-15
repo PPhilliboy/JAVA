@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=delay_time
+comment0.target=Latch(int)
+comment0.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Exor\r\n
+comment1.params=
+comment1.target=void\ calculate()
+numComments=2
