@@ -28,4 +28,5 @@ comment8.target=void\ showCompleteEventList()
 comment8.text=\r\n\ Die\ Methode\ showCompleteEventList\ gibt\ auf\ der\ Konsole\ \r\n\ chronologisch\ die\ einsortierten\ Events\ so\ wie\ sie\ in\ der\ \r\n\ Liste\ sthene\ auf\ der\ Konsole\ aus.\r\n
 comment9.params=
 comment9.target=int\ getActualTime()
+comment9.text=\r\n\ Die\ Methode\ getActualTime\ liefert\ die\ aktuelle\ Simulationszeit\ \r\n\ zurueck.\r\n
 numComments=10

@@ -39,8 +39,15 @@ public class EventQueue
             {
                 if(((Event)event_list.get(i)).getEventTime() > event.getEventTime()) 
                 {
-                event_list.add(i, event);
-                event_added = true;
+                    event_list.add(i, event);
+                    event_added = true;
+                }
+                
+                if((((Event)event_list.get(i)).getEventTime() == event.getEventTime()) && 
+                (event.getEventSignal() == ((Event)event_list.get(i)).getEventSignal()))
+                {
+                    event_list.set(i, event);
+                    event_added = true;
                 }
             }
         }
@@ -52,7 +59,7 @@ public class EventQueue
  
         /*
         //Testausgabe zur Überprüfung von korrekter Einsortierung der Anfangsevents 
-        if(event_queue_status == false)
+        if(event_queue_status == true)
         {
             showCompleteEventList();
         }
@@ -80,6 +87,13 @@ public class EventQueue
      */
     public Event getFirst()
     {
+        /*
+        //Testausgabe des nächsten abzuarbeitenden Events
+        System.out.println("Event_" + actual_time + ": " + 
+                           ((Event)event_list.getFirst()).getEventSignal().getName() + " --> " + 
+                           ((Event)event_list.getFirst()).getEventSignal().getValue());
+        */
+       
         return (Event)event_list.getFirst();
     }
 
@@ -133,6 +147,10 @@ public class EventQueue
         System.out.println("\n");
     }
     
+    /**
+     * Die Methode getActualTime liefert die aktuelle Simulationszeit 
+     * zurueck.
+     */
     public static int getActualTime()
     {
         return actual_time;

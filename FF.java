@@ -14,6 +14,7 @@ public class FF extends Gate
     public FF(int delay_time)
     {
         super(2, delay_time);
+        old_clk = false;
     }
 
     public void calculate()

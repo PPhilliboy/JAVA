@@ -22,7 +22,7 @@ public class Nand extends Gate
     }
     
     /**
-     * Diue Methode calculate berechnet den Wert des AusgangsSignals mittels 
+     * Die Methode calculate berechnet den Wert des AusgangsSignals mittels 
      * logischer Verknüpfung der Eingänge der erste Eingang wird mit dem zweiten
      * UND-Verknüpft, das Ergebnis wiederum mit dem nächsten Eingang etc.
      * wichtig ist hierbei das vorherige Setzen des Ergebnisses auf True

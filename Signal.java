@@ -73,6 +73,13 @@ public class Signal
         return value;
     }
 
+    /**
+     * Die Methode getName liefert den Namen des Signals zurück.
+     */
+    public String getName()
+    {
+        return name;
+    }
 
     /**
      * Die Methode setTarget fügt ein Ziel (Gattereingang) 

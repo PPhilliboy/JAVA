@@ -55,6 +55,15 @@ public class Event
     }     
     
     /**
+     * Die Methode getEventSignal liefert das zugehörige Signal des 
+     * jeweiligen Events zurück.
+     */
+    public Signal getEventSignal()
+    {
+        return event_signal;
+    }
+    
+    /**
      * Die Mothode propagate verwaltet die Signalzustandsänderungen (Events). 
      * Dabei wird beim propagieren grundsetzlich zwischen Finden eines 
      * eingeschwungenen Zustandes und einer aus dem Betrieb heraus 

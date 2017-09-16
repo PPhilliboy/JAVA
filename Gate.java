@@ -17,11 +17,13 @@ public abstract class Gate
     private Signal exit;  
     protected boolean old_exit_value;
     private int delay_time;
+    private boolean feedback_protection; 
     public Gate(int number_of_entrance, int delay_time)
     {
         entrances = new Signal [number_of_entrance];
         old_exit_value = false;
         this.delay_time = delay_time; 
+        feedback_protection = false;
     }
 
     /**
@@ -50,9 +52,16 @@ public abstract class Gate
     {
         if(Event.getEventQueue().getEventQueueStatus() == false)
         {
-            old_exit_value = result;
-
-            exit.setValue(result);
+            if(feedback_protection == false)
+            {
+                feedback_protection = true;
+                
+                old_exit_value = result;
+    
+                exit.setValue(result);
+                
+                feedback_protection = false;
+            }    
         }
 
         if((Event.getEventQueue().getEventQueueStatus() == true) && (result != old_exit_value))

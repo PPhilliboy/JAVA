@@ -14,7 +14,7 @@ public class Nor extends Gate
     
     public void calculate()
     {
-        boolean result = true;
+        boolean result = false;
         for( int i = 0; i < entrances.length; i++)
         {
             result = result || entrances[i].getValue();
