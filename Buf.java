@@ -15,6 +15,6 @@ public class Buf extends Gate
     public void calculate()
     {
         boolean result = entrances[0].getValue();
-        super.set_result(result);
+        super.setResult(result);
     }
 }

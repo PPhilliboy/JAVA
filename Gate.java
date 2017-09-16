@@ -46,9 +46,10 @@ public abstract class Gate
     }
 
     /**
-     * eine Methode, die je nach status die Events zur weiteren Abarbeitung erzeugt
+     * Die Methode setResult leiter entweder den Steady-State-Einschwingung 
+     * weiter, oder erstellt im Betreibsmodus neue Events.
      */
-    protected void set_result(boolean result)
+    protected void setResult(boolean result)
     {
         if(Event.getEventQueue().getEventQueueStatus() == false)
         {

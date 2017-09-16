@@ -25,6 +25,6 @@ public class Exor extends Gate
                 result = !result;
             }
         }
-        super.set_result(result);
+        super.setResult(result);
     }
 }

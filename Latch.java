@@ -23,6 +23,6 @@ public class Latch extends Gate
         {
             result = entrances[1].getValue();
         }
-        super.set_result(result);
+        super.setResult(result);
     }
 }

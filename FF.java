@@ -26,6 +26,6 @@ public class FF extends Gate
             result = entrances[1].getValue();
         }
         old_clk = clk;
-        super.set_result(result);
+        super.setResult(result);
     }
 }

@@ -20,6 +20,6 @@ public class Or extends Gate
             result = result || entrances[i].getValue();
         }
         result = result;
-        super.set_result(result);
+        super.setResult(result);
     }
 }
