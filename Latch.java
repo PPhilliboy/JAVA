@@ -12,7 +12,7 @@ public class Latch extends Gate
      */
     public Latch(int delay_time)
     {
-        super(2, delay_time);
+        super(2, 2, delay_time);
     }
 
     public void calculate()
@@ -23,6 +23,6 @@ public class Latch extends Gate
         {
             result = entrances[1].getValue();
         }
-        super.set_result(result);
+        super.setResult(result);
     }
 }

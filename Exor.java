@@ -12,7 +12,7 @@ public class Exor extends Gate
      */
     public Exor(int number_of_entrance, int delay_time)
     {
-        super(number_of_entrance, delay_time);
+        super(number_of_entrance, 1, delay_time);
     }
 
     public void calculate()
@@ -25,6 +25,6 @@ public class Exor extends Gate
                 result = !result;
             }
         }
-        super.set_result(result);
+        super.setResult(result);
     }
 }

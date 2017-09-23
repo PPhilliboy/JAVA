@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=circuit_file\ event_file
+comment0.target=DateiSimulator(java.lang.String,\ java.lang.String)
+comment0.text=\r\n\ \r\n
+comment1.params=circuit_file\ event_file
+comment1.target=void\ prepareSimulation(java.lang.String,\ java.lang.String)
+comment1.text=\r\n\r\n
+comment2.params=circuit_file
+comment2.target=void\ createCircuit(java.lang.String)
+comment2.text=\r\n\ \ \ \ \ \ "1_C.txt"\ \ \ "1_E.txt"\r\n
+comment3.params=event_file
+comment3.target=void\ createEventList(java.lang.String)
+comment3.text=\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ "1_C.txt"\ \ \ "1_E.txt"\r\n
+comment4.params=
+comment4.target=void\ findSteadyState()
+comment4.text=\r\n\r\n
+comment5.params=
+comment5.target=void\ simulate()
+comment5.text=\r\n\ Diese\ Methode\ f\uFFFDhrt\ die\ eigentliche\ Simulation\ durch.\ Dazu\ wird\r\n\ gepr\uFFFDft,\ ob\ in\ der\ EventQueue\ noch\ weitere\ Events\ vorhanden\ sind.\ Ist\r\n\ dies\ der\ Fall,\ dann\ wird\ das\ n\uFFFDchste\ anstehende\ Event\ behandelt.\ Dazu\r\n\ muss\ das\ Event\ die\ Methode\ propagate()\ zur\ Verf\uFFFDgung\ stellen,\ die\r\n\ dann\ das\ betroffene\ Signal\ informiert.\r\n
+numComments=6

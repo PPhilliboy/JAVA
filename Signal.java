@@ -16,6 +16,7 @@ public class Signal
     private boolean value;
     private ArrayList<Gate> target_list;  
     private int steady_state_counter;
+    private boolean signal_is_a_output_or_input;
     /**
      * Konstruktor für Objekte der Klasse Signal
      * es wird jedem Signal ein eindeutiger Namne zugeordnet
@@ -28,6 +29,7 @@ public class Signal
         value = false;
         target_list = new ArrayList<Gate>();
         steady_state_counter = 0;
+        signal_is_a_output_or_input = false;
     }
 
     /**
@@ -44,7 +46,7 @@ public class Signal
         
         /*
         //Testausgabe zur Überprüfung jeder Signaländerung
-        System.out.println("Name: " + name + " --> " + value);
+        System.out.println("Name: " + name + " --> " + value + " bei Zeit: " + Event.getEventQueue().getActualTime());
         */
         
         if((Event.getEventQueue().getEventQueueStatus() == false) && (steady_state_counter < 5))
@@ -54,11 +56,13 @@ public class Signal
             propagateToTargetList ();
         }
         
-        if ((Event.getEventQueue().getEventQueueStatus() == true) && (target_list.size() == 0))
+        if ((Event.getEventQueue().getEventQueueStatus() == true) && signal_is_a_output_or_input)
         {
             System.out.println(Event.getEventQueue().getFirst().getEventTime() 
                                + ": " + name + " -> " + value);
-        }else if ((Event.getEventQueue().getEventQueueStatus() == true) && (target_list.size() != 0))
+        }
+        
+        if (Event.getEventQueue().getEventQueueStatus() == true)
         {
             propagateToTargetList ();
         }
@@ -73,6 +77,13 @@ public class Signal
         return value;
     }
 
+    /**
+     * Die Methode getName liefert den Namen des Signals zurück.
+     */
+    public String getName()
+    {
+        return name;
+    }
 
     /**
      * Die Methode setTarget fügt ein Ziel (Gattereingang) 
@@ -84,6 +95,15 @@ public class Signal
         target_list.add(gate);
     }
     
+    /**
+     * Die Methode setSignalAsOutput deklariert dieses Signal 
+     * als ein Ausgabesignal der Schaltung und wird somit auf 
+     * der Konsole bei Wertänderung ausgegeben.
+     */
+    public void setSignalAsOutputOrInput ()
+    {
+        signal_is_a_output_or_input = true;
+    }
 
     /**
      * Die Methode propagateToTargetList leitet an allen am 

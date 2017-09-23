@@ -14,14 +14,17 @@ public abstract class Gate
  */
 {
     protected Signal[] entrances;    
-    private Signal exit;  
+    protected Signal[] exits;  
     protected boolean old_exit_value;
     private int delay_time;
-    public Gate(int number_of_entrance, int delay_time)
+    private boolean feedback_protection; 
+    public Gate(int number_of_entrance, int number_of_exits, int delay_time)
     {
         entrances = new Signal [number_of_entrance];
+        exits = new Signal [number_of_exits];
         old_exit_value = false;
         this.delay_time = delay_time; 
+        feedback_protection = false;
     }
 
     /**
@@ -38,21 +41,37 @@ public abstract class Gate
     /**
      *  Die Methode setOutput weist dme Gatter das Ausgangssignal zu
      */
-    public void setOutput (Signal signal)
+    public void setOutput (int exit, Signal signal)
     {
-        exit = signal;
+        exits[exit] = signal;
     }
 
     /**
-     * eine Methode, die je nach status die Events zur weiteren Abarbeitung erzeugt
+     * Die Methode setResult leiter entweder den Steady-State-Einschwingung 
+     * weiter, oder erstellt im Betreibsmodus neue Events.
      */
-    protected void set_result(boolean result)
+    protected void setResult(boolean result)
     {
         if(Event.getEventQueue().getEventQueueStatus() == false)
         {
-            old_exit_value = result;
-
-            exit.setValue(result);
+            if(feedback_protection == false)
+            {
+                feedback_protection = true;
+                
+                old_exit_value = result;
+    
+                exits[0].setValue(result);
+                
+                if(exits.length == 2)
+                {
+                    if(exits[1] != null)
+                    {
+                        exits[1].setValue(!result);
+                    }
+                }
+                
+                feedback_protection = false;
+            }    
         }
 
         if((Event.getEventQueue().getEventQueueStatus() == true) && (result != old_exit_value))
@@ -61,7 +80,15 @@ public abstract class Gate
 
             int new_event_time = Event.getEventQueue().getFirst().getEventTime() + delay_time;
 
-            new Event(exit, new_event_time, result);
+            new Event(exits[0], new_event_time, result);
+            
+            if(exits.length == 2)
+            {
+                if(exits[1] != null)
+                {
+                    new Event(exits[1], new_event_time, !result);
+                }
+            }
         }
     }
 

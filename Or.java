@@ -9,17 +9,17 @@ public class Or extends Gate
 {
     public Or(int number_of_entrance, int delay_time)
     {
-        super(number_of_entrance, delay_time);
+        super(number_of_entrance, 1, delay_time);
     }
     
     public void calculate()
     {
-        boolean result = true;
+        boolean result = false;
         for( int i = 0; i < entrances.length; i++)
         {
             result = result || entrances[i].getValue();
         }
         result = result;
-        super.set_result(result);
+        super.setResult(result);
     }
 }

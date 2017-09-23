@@ -18,11 +18,11 @@ public class Nand extends Gate
      */
     public Nand(int number_of_entrance, int delay_time)
     {
-        super(number_of_entrance, delay_time);
+        super(number_of_entrance, 1, delay_time);
     }
     
     /**
-     * Diue Methode calculate berechnet den Wert des AusgangsSignals mittels 
+     * Die Methode calculate berechnet den Wert des AusgangsSignals mittels 
      * logischer Verknüpfung der Eingänge der erste Eingang wird mit dem zweiten
      * UND-Verknüpft, das Ergebnis wiederum mit dem nächsten Eingang etc.
      * wichtig ist hierbei das vorherige Setzen des Ergebnisses auf True
@@ -41,6 +41,6 @@ public class Nand extends Gate
             result = result && entrances[i].getValue();
         }
         result = !result;
-        super.set_result(result);
+        super.setResult(result);
     }
 }

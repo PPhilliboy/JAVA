@@ -13,7 +13,8 @@ public class FF extends Gate
      */
     public FF(int delay_time)
     {
-        super(2, delay_time);
+        super(2, 2, delay_time);
+        old_clk = false;
     }
 
     public void calculate()
@@ -25,6 +26,6 @@ public class FF extends Gate
             result = entrances[1].getValue();
         }
         old_clk = clk;
-        super.set_result(result);
+        super.setResult(result);
     }
 }

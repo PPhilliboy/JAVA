@@ -9,12 +9,12 @@ public class Buf extends Gate
 {
     public Buf(int delay_time)
     {
-        super(1, delay_time);
+        super(1, 1, delay_time);
     }
     
     public void calculate()
     {
         boolean result = entrances[0].getValue();
-        super.set_result(result);
+        super.setResult(result);
     }
 }
