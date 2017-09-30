@@ -1,19 +1,19 @@
 #BlueJ class context
 comment0.params=circuit_file\ event_file
 comment0.target=DateiSimulator(java.lang.String,\ java.lang.String)
-comment0.text=\r\n\ \r\n
+comment0.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Dateisimulator\r\n
 comment1.params=circuit_file\ event_file
 comment1.target=void\ prepareSimulation(java.lang.String,\ java.lang.String)
-comment1.text=\r\n\r\n
+comment1.text=\r\n\ Die\ Methode\ prepareSimulation\ bereitet\ die\ Simulation\ vor.\ Zum\ \r\n\ einen\ wird\ die\ Schaltung\ aufgebaut,\ dann\ die\ Signalzustands\u00E4nderungen\ \r\n\ eingelesen\ und\ abschlie\u00DFend\ ein\ eingeschwungener\ Zustand\ der\ \r\n\ Schaltung\ gefunden.\r\n
 comment2.params=circuit_file
 comment2.target=void\ createCircuit(java.lang.String)
-comment2.text=\r\n\ \ \ \ \ \ "1_C.txt"\ \ \ "1_E.txt"\r\n
+comment2.text=\r\n\ \ Die\ Methode\ createCircuit\ baut\ die\ Schaltung\ aus\ dem\ eingelesenen\ \r\n\ \ Textfile\ auf.\r\n
 comment3.params=event_file
 comment3.target=void\ createEventList(java.lang.String)
-comment3.text=\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ "1_C.txt"\ \ \ "1_E.txt"\r\n
+comment3.text=\r\n\ Die\ Methode\ createEventList\ erzeugt\ die\ anf\u00E4ngliche\ Eventlist\ -Liste\ \r\n\ der\ Signalzustands\u00E4nderungen-\ aus\ der\ eingelesen\ Datei.\r\n
 comment4.params=
 comment4.target=void\ findSteadyState()
-comment4.text=\r\n\r\n
+comment4.text=\r\n\ Die\ Methode\ finbdSteadyState\ erzeugt\ den\ eingeschwungenen\ Zustand\ der\ \r\n\ Schaltung\ indem\ alle\ Eingangssignale\ einmal\ auf\ false\ gesetzt\ und\ durch\ \r\n\ die\ Schaltung\ propagiert\ werden.\r\n
 comment5.params=
 comment5.target=void\ simulate()
 comment5.text=\r\n\ Diese\ Methode\ f\uFFFDhrt\ die\ eigentliche\ Simulation\ durch.\ Dazu\ wird\r\n\ gepr\uFFFDft,\ ob\ in\ der\ EventQueue\ noch\ weitere\ Events\ vorhanden\ sind.\ Ist\r\n\ dies\ der\ Fall,\ dann\ wird\ das\ n\uFFFDchste\ anstehende\ Event\ behandelt.\ Dazu\r\n\ muss\ das\ Event\ die\ Methode\ propagate()\ zur\ Verf\uFFFDgung\ stellen,\ die\r\n\ dann\ das\ betroffene\ Signal\ informiert.\r\n

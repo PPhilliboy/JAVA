@@ -2,7 +2,11 @@ import java.util.StringTokenizer;
 import java.util.HashMap;
 import java.util.LinkedList;
 /**
- * als nächstes muss die gateerstellung gemacht werden
+ * Die Klasse DATEISIMULTOR koordiniert die Simulation. Mit dem Erstellen 
+ * einer Instanz dieser Klasse wird dazu aufgefordert einen Satz an 
+ * Daten (Schaltung und Signaleingangsänderungen) eingelesen und daraus 
+ * die Schaltung erstellt. Nach dem Erstellen wird ein eingeschwungener 
+ * Zustand der Schaltung hergestellt und doie Schaltung kann simuliert werden.
  * 
  * @author (Philipp Schneevoigt und Gerrit Buecken) 
  * @version (16.09.2017)
@@ -19,7 +23,7 @@ public class DateiSimulator
     private HashMap<String, Gate> gate_collection;
         
     /**
-     * 
+     * Konstruktor für Objekte der Klasse Dateisimulator
      */
     public DateiSimulator(String circuit_file, String event_file)
     {
@@ -38,7 +42,10 @@ public class DateiSimulator
     }
     
     /**
-     *
+     * Die Methode prepareSimulation bereitet die Simulation vor. Zum 
+     * einen wird die Schaltung aufgebaut, dann die Signalzustandsänderungen 
+     * eingelesen und abschließend ein eingeschwungener Zustand der 
+     * Schaltung gefunden.
      */
     private void prepareSimulation(String circuit_file, String event_file) 
     {
@@ -48,7 +55,8 @@ public class DateiSimulator
     }
     
     /**
-     *      "1_C.txt"   "1_E.txt"
+     *  Die Methode createCircuit baut die Schaltung aus dem eingelesenen 
+     *  Textfile auf.
      */
     private void createCircuit (String circuit_file) 
     {
@@ -329,7 +337,8 @@ public class DateiSimulator
     }
     
     /**
-     *             "1_C.txt"   "1_E.txt"
+     * Die Methode createEventList erzeugt die anfängliche Eventlist -Liste 
+     * der Signalzustandsänderungen- aus der eingelesen Datei.
      */
     private void createEventList (String event_file) 
     {       
@@ -387,7 +396,9 @@ public class DateiSimulator
     }
     
     /**
-     *
+     * Die Methode finbdSteadyState erzeugt den eingeschwungenen Zustand der 
+     * Schaltung indem alle Eingangssignale einmal auf false gesetzt und durch 
+     * die Schaltung propagiert werden.
      */
     private void findSteadyState() 
     {
