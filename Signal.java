@@ -56,12 +56,15 @@ public class Signal
             propagateToTargetList ();
         }
         
+        
+        /*
         if ((Event.getEventQueue().getEventQueueStatus() == true) && signal_is_a_output_or_input)
         {
             System.out.println(Event.getEventQueue().getFirst().getEventTime() 
                                + ": " + name + " -> " + value);
         }
-        
+        */
+       
         if (Event.getEventQueue().getEventQueueStatus() == true)
         {
             propagateToTargetList ();
@@ -115,5 +118,15 @@ public class Signal
         {
             target_list.get(i).calculate();
         }
-    }    
+    }  
+    
+    /**
+     * Die Methode getInfoSignalIsOutputOrInput liefert die 
+     * Information des Signals, ob es sich um ein Input oder 
+     * Outputsignal handelt zurück. 
+     */
+    public boolean getInfoSignalIsOutputOrInput ()
+    {
+        return signal_is_a_output_or_input;
+    }
 }

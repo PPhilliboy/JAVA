@@ -21,6 +21,7 @@ public class DateiSimulator
     private HashMap<String, Signal> output_signal_collection;
     private LinkedList<String> output_signal_keys;
     private HashMap<String, Gate> gate_collection;
+    private HashMap<String, String> simulation_data;
         
     /**
      * Konstruktor für Objekte der Klasse Dateisimulator
@@ -36,6 +37,7 @@ public class DateiSimulator
         output_signal_collection = new HashMap<String, Signal>();
         output_signal_keys = new LinkedList<String>();
         gate_collection = new HashMap<String, Gate>(); 
+        simulation_data = new HashMap<String, String>();
         
         //prepareSimulation("4_C.txt", "4_E.txt");
         prepareSimulation(circuit_file, event_file);
@@ -416,10 +418,61 @@ public class DateiSimulator
      * dann das betroffene Signal informiert.
      */
     public void simulate() {
-    	while (queue.hasMore()) {
-    	    Event e=queue.getFirst();
+        while (queue.hasMore()) {
+            Event e=queue.getFirst();
     
-    	    e.propagate();
-    	}
+            e.propagate();
+ 
+            collectSimmulationData(e);
+        }
+        
+        if(!queue.hasMore())
+            {
+                for(int i = 0; i <= queue.getActualTime(); i++)
+                {
+                    if(simulation_data.containsKey(Integer.toString(i)))
+                    {
+                        System.out.println(simulation_data.get(Integer.toString(i)));
+                    }
+                }
+        }
     }
+     
+     /**
+     * Die Methode collectSimmulationData sammelt alle relevanten Daten der Simulation.
+     */
+    private void collectSimmulationData (Event event)
+    {    
+        String line = queue.getActualTime()+ ": ";
+            
+        if ((queue.getEventQueueStatus() == true) && event.getEventSignal().getInfoSignalIsOutputOrInput ())
+        {
+            for(int i = 0; i < input_signal_keys.size(); i++)
+            {
+                Signal input = input_signal_collection.get(input_signal_keys.get(i));
+                
+                String name = input.getName();
+                boolean value = input.getValue();
+                
+                line = line + name + " " + value + "    ";
+            }
+            
+            for(int i = 0; i < output_signal_keys.size(); i++)
+            {
+                Signal output = output_signal_collection.get(output_signal_keys.get(i));
+                
+                String name = output.getName();
+                boolean value = output.getValue();
+                
+                line = line + name + " " + value + "    ";
+            }
+            
+            if(simulation_data.containsKey(queue.getActualTime()))
+            {
+                simulation_data.remove(queue.getActualTime());
+            }
+            
+            simulation_data.put(Integer.toString(queue.getActualTime()), line);            
+        }
+    }  
 }

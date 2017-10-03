@@ -1,0 +1,53 @@
+# Kommentarzeilen beginnen mit einem #-Symbol, Leerzeilen werden ignoriert
+# Eigenes Beispiel: Schieberegister.
+
+# Eingaenge der Schaltung
+Input data,clock;
+
+# Ausgaenge der Schaltung
+Output Q_a,Q_b,Q_c,Q_d;
+Output Q_e,Q_f,Q_g,Q_h;
+
+# Definition aller Gatter
+# Zu den Gattern muss jeweils eine Verzoegerung angegeben werden
+Gate g1 LATCH Delay 5;
+Gate g2 LATCH Delay 5;
+Gate g3 LATCH Delay 5;
+Gate g4 LATCH Delay 5;
+Gate g5 LATCH Delay 5;
+Gate g6 LATCH Delay 5;
+Gate g7 LATCH Delay 5;
+Gate g8 LATCH Delay 5;
+
+# Beschaltung der Gatter
+g1.d=data;
+g1.e=clock;
+g1.q=Q_a;
+
+g2.d=Q_a;
+g2.e=clock;
+g2.q=Q_b;
+
+g3.d=Q_b;
+g3.e=clock;
+g3.q=Q_c;
+
+g4.d=Q_c;
+g4.e=clock;
+g4.q=Q_d;
+
+g5.d=Q_d;
+g5.e=clock;
+g5.q=Q_e;
+
+g6.d=Q_e;
+g6.e=clock;
+g6.q=Q_f;
+
+g7.d=Q_f;
+g7.e=clock;
+g7.q=Q_g;
+
+g8.d=Q_g;
+g8.e=clock;
+g8.q=Q_h;

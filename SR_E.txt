@@ -1,0 +1,21 @@
+# Kommentarzeilen werden genau wie in der Schaltungsbeschreibung angegeben
+# Danach folgt eine einfache Liste von Events
+# Sie koennen davon ausgehen, dass diese Events sortiert sind
+# Leerzeilen sollen einfach überlesen werden
+# Das Format einer Zeile ist dabei immer <Zeitpunkt> <Signalname> <Wert>
+
+0   data    0
+0   clock   0 
+
+5   data    1
+10  clock   1
+35  data    0
+20  clock   0 
+30  clock   1
+40  clock   0
+50  clock   1
+60  clock   0 
+70  clock   1
+80  clock   0
+90  clock   1
+100 clock   0
