@@ -447,6 +447,7 @@ public class DateiSimulator
             
         if ((queue.getEventQueueStatus() == true) && event.getEventSignal().getInfoSignalIsOutputOrInput ())
         {
+            line = line + "INPUTS       ";
             for(int i = 0; i < input_signal_keys.size(); i++)
             {
                 Signal input = input_signal_collection.get(input_signal_keys.get(i));
@@ -456,7 +457,7 @@ public class DateiSimulator
                 
                 line = line + name + " " + value + "    ";
             }
-            
+            line = line + "     OUTPUTS       ";
             for(int i = 0; i < output_signal_keys.size(); i++)
             {
                 Signal output = output_signal_collection.get(output_signal_keys.get(i));

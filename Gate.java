@@ -56,7 +56,7 @@ public abstract class Gate
         {
             if(feedback_protection == false)
             {
-                feedback_protection = true;
+                //feedback_protection = true;
                 
                 old_exit_value = result;
     
